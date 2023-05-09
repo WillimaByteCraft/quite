@@ -128,7 +128,7 @@ section{
 }
 #home{
 	background-image:
-	linear-gradient(to bottom, rgb(0, 0, 0),rgba(0, 0, 0, 0.945)),  url('/HTML_Projects/Intr_to_html/images/bg_image-1.jpg');
+	linear-gradient(to bottom, rgb(0, 0, 0),rgba(0, 0, 0, 0.945)),  url('/images/bg_image-1.jpg');
 }
 #gallery{
     background: linear-gradient(to bottom, #09203F,#537895), url('#');
