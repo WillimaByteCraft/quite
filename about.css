@@ -114,7 +114,7 @@ body{
     width: 100%;
     height: 100vh;
     
-    background-image: linear-gradient(to bottom, rgba(2, 2, 2, 0.342),rgba(0, 0, 0, 0.75)), url('/HTML_Projects/Intr_to_html/images/Session.jpg');
+    background-image: linear-gradient(to bottom, rgba(2, 2, 2, 0.342),rgba(0, 0, 0, 0.75)), url('/images/Session.jpg');
     background-size: cover;
     background-position: center;
     font-family: sans-serif;
