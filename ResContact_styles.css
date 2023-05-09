@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family:  sans-serif;
+	font-size: 1.6rem;
+	color: #fff;
+    background-color: #353836;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.logo{
+    width: 120px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.us{
+    color:  rgb(150, 135, 50);
+}
+
+    .hamburger {
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+        z-index: 9999;
+        font-size: 3rem;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    header::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        transition: opacity 0.5s 0.25s;
+    }
+    .active header::after {
+        transform: translate(0, 0);
+        opacity: 1;
+        transition: opacity 0.6s;
+    }
+    .nav {
+        position: fixed;
+        inset: 0 auto 0 0;
+        z-index: 1000;
+        width: 28rem;
+        background-color: #1a1d24;
+        padding: 1.6rem;
+        transform: translateX(-29rem);
+        transition: transform 0.6s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    }
+    .active .nav {
+        transform: translateX(0);
+    }
+    .nav-list {
+        list-style: none;
+    }
+    .nav-item {
+        position: relative;
+    }
+    .nav-item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #18e0b5;
+    }
+    .nav-link {
+        display: block;
+        text-transform: uppercase;
+        line-height: 6rem;
+        letter-spacing: 3px;
+        opacity: 0.75;
+        transition: opacity 0.25s;
+    }
+    .nav-link.current {
+        color: #fff;
+        opacity: 1;
+    }
+    .nav-link:hover {
+        opacity: 1;
+    }
+    .nav-link span {
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+    
+    .logo{
+        width: 120px;
+        position: absolute;
+    }
+    main {
+        perspective: 1500px;
+    }
+
+
+section{
+    padding: 40px 15%;
+}
+.contact{
+    background: rgb(24, 24, 24);
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+    grid-gap: 6rem;
+}
+
+.contact-img img{
+    max-width: 100%;
+    height: auto;
+    width: 720px;
+    border-radius: 10px;
+}
+
+.contact-form h1{
+    font: sans-serif;
+    font-size: 80px;
+    color: white;
+    margin-bottom: 20px;
+
+}
+
+
+.contact-form p{
+    color: aquamarine;
+    letter-spacing: 1px;
+    line-height: 26px;
+    font-size: 1.1rem;
+    margin-bottom: 3.8rem;
+}
+.contact-form{
+    position: relative;
+}
+.contact-form form input,
+form textarea{
+    width: 100%;
+    padding: 17px;
+    border: none;
+    outline: none;
+    background: #191919;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    border-radius: 10px;
+}
+.contact-form textarea{
+    resize: none;
+    height: 200px; 
+}
+
+.contact-form form .btn{
+    display: inline-block;
+    background: rgb(150, 135, 50);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 220px;
+    transition: ease .20s;
+    cursor: pointer;
+}
+.contact-form form .btn:hover{
+    border: 2px solid rgb(150, 135, 50);
+    background: transparent;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1570px){
+    section{
+        padding: 80px 3%;
+        transition: .2s;
+    }
+    .contact-form h1{
+        font-size: 60px;
+        margin-top: 60px;
+    }
+    .contact-form p{
+        margin-bottom: 3rem;
+    }
+}
+@media (max-width: 1090px){
+    .contact{
+        grid-gap: 2rem;
+        transition: 3s;
+    }
+}
+@media(max-width: 1000px){
+    .contact{
+        grid-template-columns: 1fr;
+    }
+    .contact-form{
+        order: 2;
+    }
+    .contact-img img{
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 450px) {
+	.hamburger {
+		top: 1.5rem;
+		right: 1.5rem;
+	}
+}
+@media screen and (max-width: 350px) {
+	.nav {
+		width: 25rem;
+	}
+}
+ 
+    
+
+     
+    
+  
