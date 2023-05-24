@@ -12,12 +12,12 @@ body {
 	font-family:  sans-serif;
 	font-size: 1.6rem;
 	color: #fff;
+	pointer-events: none;
 }
 a {
 	text-decoration: none;
 	color: inherit;
 }
-/* General styles end*/
 
 .hamburger {
 	position: fixed;
@@ -27,6 +27,7 @@ a {
 	font-size: 3rem;
 	padding: 0.5rem;
 	cursor: pointer;
+	pointer-events: all;
 }
 header::after {
 	content: '';
@@ -51,6 +52,7 @@ header::after {
 	padding: 1.6rem;
 	transform: translateX(-29rem);
 	transition: transform 0.6s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+	pointer-events: all;
 }
 .active .nav {
 	transform: translateX(0);
@@ -89,13 +91,13 @@ header::after {
 	font-size: 2rem;
 	margin-right: 1rem;
 }
-
 .logo{
-    width: 120px;
-	position: absolute;
+	position: fixed;
+	width: 120px;
 }
 main {
 	perspective: 1000px;
+	pointer-events: all;
 }
 .zoom {
 	transform-style: preserve-3d;
@@ -105,81 +107,99 @@ main {
 .active .zoom {
 	transform: translate3d(0, 0, -25rem);
 }
-/* Main content  */
-.samples{
-	width: 100%;
-	
-}
-body{
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(66, 81, 214, 0.342),rgba(41, 44, 235, 0.75)), url('Ladies.jpg');
-    background-size: cover;
-    background-position: center;
-    font-family: sans-serif;
-    }
-  
-.logo{
-    width: 120px;
-    cursor: pointer;
-}
 
-.content{
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+
+#gallery{
+    background:#667579;
+	height: 100%;
+	justify-content: center;
+}
+.Gallery h1{
+    padding: 60px 0;
+    color: #fff;
     text-align: center;
-    color: rgb(211, 60, 166);
+    font-size: 4rem; 
+}
+.first-m{
+    width: 90%;
+    height: 550px;
+    margin: auto;
+    position: relative;
+    border: 0 solid #e5e7eb;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 9px;
+
 }
 
-
-.content h1{
-font-size: 60px;
-margin-top: 100px;
-
+/* The footer*/
+ul {
+	list-style: none;
 }
-.buty{
-    color: white;
+a {
+	text-decoration: none;
+	color: inherit;
 }
-.content p{
-margin: 20px auto;
-font-weight: 100;
-line-height: 25px;
-color: white;
+p {
+	padding-bottom: 16px;
+}
+i {
+	font-size: 24px;
+}
+/* ======================== */
+.footer {
+	padding-block: 50px;
+	padding-bottom: 25px;
+	background-color: #151515;
+	color: #666873;
+	/* Margin-top: auto; for demo use only */
+	margin-top: auto;
+}
+.footer__container {
+	max-width: 1160px;
+	margin: auto;
+	padding: 0 15px;
+}
+.footer__top {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	row-gap: 20px;
+}
+.footer__title {
+	font-size: 18px;
+	color: #fff;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+.footer__list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.footer__list-link {
+	transition: color 0.25s;
+}
+.footer__list-link:hover {
+	color: #fff;
+}
+.footer__divider {
+	margin-block: 25px;
+	border: none;
+	border-top: 1px solid rgba(252, 255, 255, 0.1);
+}
+.footer__bottom {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+.footer__list--bottom {
+	flex-direction: row;
 }
 
-
-    @media screen and (max-width: 481px){
-       
-        
-        .logo{
-            width: 95px;
-            margin-top: 60px;
-        } 
-        .content h1{
-            font-size: 2.5rem;
-        }
-    
-    @media only screen and (max-width: 768px) {
-         .logo{
-            width: 90px;
-         }
-    
-        }
-    }
-
-    
-    @media screen and (max-width: 450px) {
-        .hamburger {
-            top: 1.5rem;
-            right: 1.5rem;
-        }
-    }
-    @media screen and (max-width: 350px) {
-        .nav {
-            width: 25rem;
-        }
-    }
-   
-    
+@media screen and (max-width: 450px) {
+	.hamburger {
+		top: 1.5rem;
+		right: 1.5rem;
+	}
+}
