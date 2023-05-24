@@ -120,6 +120,7 @@ main {
     text-align: center;
     font-size: 4rem; 
 }
+
 .first-m{
     width: 90%;
     height: 550px;
@@ -130,6 +131,9 @@ main {
     overflow: hidden;
     margin-bottom: 9px;
 
+}
+.vid-desc{
+    margin-left:3rem;
 }
 
 /* The footer*/
